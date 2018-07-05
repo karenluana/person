@@ -1,0 +1,30 @@
+default: &default
+  port: 5432
+  schema_search_path: person
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: postgres
+  username: karen
+  password: '123456'
+  host: localhost
+  pool: 1
+
+test:
+  <<: *default
+  database: postgres
+  username: karen
+  password: '123456'
+  host: localhost
+  pool: 1
+
+production:
+  <<: *default
+  database: postgres
+  username: karen
+  password: '123456'
+  host: localhost
+  pool: 1
